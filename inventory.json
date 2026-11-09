@@ -1,0 +1,17 @@
+{
+  "parts": [
+    {"id":"10000000-0000-4000-8000-000000000001","barcode":"DEMO-001","number":"CC0402KRX7R7BB104","manufacturer":"Yageo","description":"Ceramic bypass capacitor","package":"0402","value":"100nF","tolerance":"±10%","labels":["Capacitor"],"storage":"Demo drawer A","stock":200},
+    {"id":"10000000-0000-4000-8000-000000000002","barcode":"DEMO-002","number":"RC0402FR-0710KL","manufacturer":"Yageo","description":"Thick-film resistor","package":"0402","value":"10kΩ","tolerance":"±1%","labels":["Resistor"],"storage":"Demo drawer A","stock":100},
+    {"id":"10000000-0000-4000-8000-000000000003","barcode":"DEMO-003","number":"CH340C","manufacturer":"WCH","description":"USB-to-serial bridge","package":"SOIC-16","labels":["IC"],"storage":"Demo drawer B","stock":12}
+  ],
+  "purchases": [
+    {"part":{"id":"20000000-0000-4000-8000-000000000001","barcode":"DEMO-101","number":"STM32G431CBT6","manufacturer":"STMicroelectronics","description":"32-bit Arm Cortex-M4 microcontroller","package":"LQFP-48","stock":4},"assignments":[{"id":"30000000-0000-4000-8000-000000000001","project":"CLN17","quantity":1,"designators":"IC1"}]},
+    {"part":{"id":"20000000-0000-4000-8000-000000000002","barcode":"DEMO-102","number":"TLE5012B","manufacturer":"Infineon","description":"Magnetic angle sensor","package":"SOIC-8","stock":5}}
+  ],
+  "projects": [
+    {"id":"40000000-0000-4000-8000-000000000001","name":"CLN17","description":"CLN17 V2.5 closed-loop stepper motor driver by Anton Khrustalev / CREAPUNK","notes":{"text":"CLN17 V2.5 by Anton Khrustalev / CREAPUNK. This demo uses the unmodified upstream KiCad project, schematic and PCB under CC BY-NC-SA 4.0."}}
+  ],
+  "allocations": [],
+  "storage": {"Demo drawer A":"Passive components","Demo drawer B":"Integrated circuits"},
+  "bom": []
+}
