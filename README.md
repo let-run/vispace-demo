@@ -45,3 +45,20 @@ After staging the demo, serve it from the ViSpace repository root:
 ```sh
 python3 script/serve_web.py --directory demo/site --port 8788 --http
 ```
+
+## 3D models
+
+The demo build downloads the referenced project models from the pinned public
+CLN17 snapshot and copies the referenced standard models from the local KiCad
+library. On macOS it looks in
+`/Applications/KiCad/KiCad.app/Contents/SharedSupport/3dmodels` by default.
+For another installation, pass its library directory explicitly:
+
+```sh
+python3 demo/prepare_web_demo.py --kicad-models /path/to/3dmodels
+```
+
+The generated `site/demo/models/` directory contains the model manifest,
+files, and attribution. Visitors fetch these models when they open **3D board**.
+Build output lists references it could not resolve, including paths pointing
+to the board author's machine.

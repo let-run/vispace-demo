@@ -28,7 +28,7 @@ self.onmessage = async ({ data }) => {
     }
     if(input.Board3d) {
       const b=input.Board3d;
-      b.assets=await readBoardModels(b.board,b.path,b.folder,b.models_folder,text=>JSON.parse(parse_footprint_model_libraries(text)));
+      b.assets=await readBoardModels(b.board,b.path,b.folder,b.models_folder,text=>JSON.parse(parse_footprint_model_libraries(text)), b.demo);
       b.cache=await readProject3dCache(b.folder,b.path);
     }
     let result=JSON.parse(run_worker_job(JSON.stringify(input)));

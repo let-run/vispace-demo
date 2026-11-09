@@ -1,0 +1,31 @@
+{
+  "project": "CLN17-V2.5.kicad_pro",
+  "files": {
+    "${KICAD6_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_1210_3225Metric.wrl": "kicad/Capacitor_SMD.3dshapes/C_1210_3225Metric.step",
+    "${KICAD6_3DMODEL_DIR}/Connector_PinSocket_2.00mm.3dshapes/PinSocket_2x02_P2.00mm_Vertical_SMD.wrl": "kicad/Connector_PinSocket_2.00mm.3dshapes/PinSocket_2x02_P2.00mm_Vertical_SMD.step",
+    "${KICAD6_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-123F.wrl": "kicad/Diode_SMD.3dshapes/D_SOD-123F.step",
+    "${KICAD8_3DMODEL_DIR}/Package_SO.3dshapes/TSSOP-8_4.4x3mm_P0.65mm.wrl": "kicad/Package_SO.3dshapes/TSSOP-8_4.4x3mm_P0.65mm.step",
+    "${KIPRJMOD}/libs/models.3dshapes/0606_RGB_LED.step": "cln17/libs/models.3dshapes/0606_RGB_LED.step",
+    "${KIPRJMOD}/libs/models.3dshapes/2520 osc.STEP": "cln17/libs/models.3dshapes/2520 osc.STEP",
+    "${KIPRJMOD}/libs/models.3dshapes/C_0402_1005Metric.step": "cln17/libs/models.3dshapes/C_0402_1005Metric.step",
+    "${KIPRJMOD}/libs/models.3dshapes/C_0603_1608Metric.step": "cln17/libs/models.3dshapes/C_0603_1608Metric.step",
+    "${KIPRJMOD}/libs/models.3dshapes/D_SMAF.step": "cln17/libs/models.3dshapes/D_SMAF.step",
+    "${KIPRJMOD}/libs/models.3dshapes/HRO_TYPE-C-31-M-12.step": "cln17/libs/models.3dshapes/HRO_TYPE-C-31-M-12.step",
+    "${KIPRJMOD}/libs/models.3dshapes/HVSON8-P0.65-EP.step": "cln17/libs/models.3dshapes/HVSON8-P0.65-EP.step",
+    "${KIPRJMOD}/libs/models.3dshapes/JST-B2B-PH-K-S.step": "cln17/libs/models.3dshapes/JST-B2B-PH-K-S.step",
+    "${KIPRJMOD}/libs/models.3dshapes/JST-B5B-PH-K-S.step": "cln17/libs/models.3dshapes/JST-B5B-PH-K-S.step",
+    "${KIPRJMOD}/libs/models.3dshapes/JST-S2B-PH-K-S.step": "cln17/libs/models.3dshapes/JST-S2B-PH-K-S.step",
+    "${KIPRJMOD}/libs/models.3dshapes/JST-S5B-PH-K-S.step": "cln17/libs/models.3dshapes/JST-S5B-PH-K-S.step",
+    "${KIPRJMOD}/libs/models.3dshapes/KF128-2.54-4P.step": "cln17/libs/models.3dshapes/KF128-2.54-4P.step",
+    "${KIPRJMOD}/libs/models.3dshapes/QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm.step": "cln17/libs/models.3dshapes/QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm.step",
+    "${KIPRJMOD}/libs/models.3dshapes/R_0402_1005Metric.step": "cln17/libs/models.3dshapes/R_0402_1005Metric.step",
+    "${KIPRJMOD}/libs/models.3dshapes/SKRPACE010 v4.step": "cln17/libs/models.3dshapes/SKRPACE010 v4.step",
+    "${KIPRJMOD}/libs/models.3dshapes/SOIC-8_3.9x4.9mm_P1.27mm.step": "cln17/libs/models.3dshapes/SOIC-8_3.9x4.9mm_P1.27mm.step",
+    "${KIPRJMOD}/libs/models.3dshapes/SOT-23-6.step": "cln17/libs/models.3dshapes/SOT-23-6.step",
+    "${KIPRJMOD}/libs/models.3dshapes/SOT-23W.step": "cln17/libs/models.3dshapes/SOT-23W.step",
+    "${KIPRJMOD}/libs/models.3dshapes/TSSOP-38-5x7.step": "cln17/libs/models.3dshapes/TSSOP-38-5x7.step",
+    "${KIPRJMOD}/libs/models.3dshapes/XH-2A.step": "cln17/libs/models.3dshapes/XH-2A.step",
+    "${KIPRJMOD}/libs/models.3dshapes/XH-2AW.step": "cln17/libs/models.3dshapes/XH-2AW.step",
+    "${KIPRJMOD}/libs/models.3dshapes/XH-4AW.step": "cln17/libs/models.3dshapes/XH-4AW.step"
+  }
+}

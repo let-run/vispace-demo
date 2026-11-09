@@ -803,12 +803,22 @@ export async function chooseModelsFolder() {
     document.body.append(input);input.click();
   });
 }
-export async function readBoardModels(board,projectPath,projectFolder,modelsFolder,parseLibraries) {
+export async function readBoardModels(board,projectPath,projectFolder,modelsFolder,parseLibraries,demo=false) {
   const project=projectFolder?await readRecord('folders',projectFolder):null;
   const library=modelsFolder?await readRecord('folders',modelsFolder):null;
-  return loadBoardModelsFromHandles(board,projectPath,project,library,parseLibraries);
+  let hosted={};
+  if(demo){
+    try {
+      const response=await fetch(new URL('./demo/models/manifest.json',import.meta.url));
+      if(response.ok){
+        const manifest=await response.json();
+        if(manifest.project===projectPath)hosted=manifest.files??{};
+      }
+    }catch{/* A demo without bundled models can still render the board. */}
+  }
+  return loadBoardModelsFromHandles(board,projectPath,project,library,parseLibraries,hosted);
 }
-export async function loadBoardModelsFromHandles(board,projectPath,project,library,parseLibraries) {
+export async function loadBoardModelsFromHandles(board,projectPath,project,library,parseLibraries,hosted={}) {
   const base=projectPath.replaceAll('\\','/').split('/').slice(0,-1).join('/');
   const paths=new Set(board.footprint_list.flatMap(f=>(f.models||[]).filter(m=>!m.hidden).map(m=>m.path)));
   const assets={};let total=0;
@@ -864,9 +874,20 @@ export async function loadBoardModelsFromHandles(board,projectPath,project,libra
       else paths.push(path.replace(/\.(step|stp)$/i,'.wrl'));
       return paths.map(path=>({root,path}));
     });
-    for(const {root,path:candidate} of alternatives){
+    const bundled=Object.hasOwn(hosted,original)?hosted[original]:null;
+    const segments=typeof bundled==='string'?bundled.split('/'):[];
+    if(['cln17','kicad'].includes(segments[0])&&segments.every(part=>part&&part!=='.'&&part!=='..'&&!part.includes('\\'))){
+      alternatives.push({path:bundled,url:new URL('./demo/models/'+segments.map(encodeURIComponent).join('/'),import.meta.url)});
+    }
+    for(const {root,path:candidate,url} of alternatives){
       try{
-        const file=await read(root,candidate);if(!file)continue;
+        let file;
+        if(url){
+          const response=await fetch(url);
+          if(!response.ok)continue;
+          file=await response.blob();
+        }else file=await read(root,candidate);
+        if(!file)continue;
         if(file.size>32*1024*1024||total+file.size>128*1024*1024)continue;
         const bytes=new Uint8Array(await file.arrayBuffer());let binary='';
         for(let i=0;i<bytes.length;i+=16384)binary+=String.fromCharCode(...bytes.subarray(i,i+16384));
